@@ -1,0 +1,354 @@
+html {
+    font-size: 1.125rem;
+    scroll-behavior: smooth;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: rgb(10, 10, 48);
+}
+
+/* Navigation Bar */
+
+#navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#navbar::before {
+    content: "";
+    background-color: black;
+    width: 100%;
+    height: 13%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 2rem;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+
+#logo img {
+    width: 5rem;
+    height: 4rem;
+    margin-left: 3.4rem;
+    border-radius: 100%;
+}
+
+#navbar ul {
+    width: 64rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+#navbar a {
+    padding: 1rem 1rem;
+    color: white;
+    text-decoration: none;
+    transition: all 2s ease-in-out;
+}
+
+#navbar a:hover {
+    color: black;
+    background-color: white;
+    border-radius: 2rem;
+}
+
+#search input[placeholder] {
+    color: white;
+    background-color: black;
+    text-align: center;
+    padding: 0.2rem 0rem;
+}
+
+/* Home Section */
+
+#home {
+    height: 26rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#home:before {
+    content: "";
+    background: url('https://wallpapercave.com/wp/wp11089675.jpg') no-repeat scroll center center / cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 29rem;
+    border-bottom-right-radius: 20%;
+    border-bottom-left-radius: 20%;
+    z-index: -2;
+    opacity: 0.2;
+}
+
+.heading {
+    color: transparent;
+    width: 22rem;
+    height: 7rem;
+    margin: 1rem auto;
+    font-size: 3rem;
+    text-align: center;
+    background: url('https://cdn.openart.ai/stable_diffusion/f7a64225073a939c874645f87b40e923053d8489_2000x2000.webp') no-repeat local center center / cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    position: relative;
+    animation: zoom 10s ease-in-out 1;
+}
+
+@keyframes zoom {
+    from {
+        top: 0;
+        right: 0.5rem;
+        font-size: 0.5rem;
+        opacity: 0;
+        /* transform:rotate(45deg); */
+    }
+    
+    to {
+        top: 0;
+        right: 0;
+        font-size: 3rem;
+        opacity: 1;
+        /* transform:rotate(0deg); */
+    }
+}
+
+#home img {
+    display: block;
+    width: 22rem;
+    height: 12rem;
+    border-radius: 20%;
+    opacity: 0.7;
+}
+
+#side {
+    width: 74.94rem;
+    height: 19.3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 22rem));
+    justify-content: space-evenly;
+}
+
+#side p {
+    color: rgb(187 50 18);
+    font-weight: bold;
+    font-size: 1.2rem;
+    /* position: relative;
+    bottom: 4rem;
+    left: 1rem; */
+    text-align: center;
+    text-shadow: 0.01rem 0.01rem aqua;
+}
+
+#side1 {
+    box-shadow: inset 0rem 0rem 1rem 1rem lightblue;
+    border-radius: 17%;
+    position: relative;
+    animation: sidebar1 6s ease-in-out infinite forwards;
+}
+
+@keyframes sidebar1 {
+    0% {
+        top: 0;
+        left: 0;
+    }
+    
+    100% {
+        top: 0rem;
+        right: 0rem;
+        opacity: 0;
+        z-index: -2;
+    }
+
+}
+
+#side2 {
+    box-shadow: inset 0rem 0rem 1rem 1rem lightblue;
+    border-radius: 17%;
+    position: relative;
+    animation: sidebar2 9s ease-in-out infinite forwards;
+}
+
+@keyframes sidebar2 {
+    0% {
+        top: 0;
+        left: 0;
+    }
+
+    100% {
+        top: 0rem;
+        right: 0rem;
+        opacity: 0;
+        z-index: -2;
+    }
+}
+
+#side3 {
+    box-shadow: inset 0rem 0rem 1rem 1rem lightblue;
+    border-radius: 17%;
+    position: relative;
+    animation: sidebar3 12s ease-in-out infinite forwards;
+}
+
+@keyframes sidebar3 {
+    0% {
+        top: 0;
+        left: 0;
+    }
+
+    100% {
+        top: 0rem;
+        right: 0rem;
+        opacity: 0;
+        z-index: -2;
+    }
+}
+
+/* section of popular movies */
+#popular {
+    display: inline-block;
+    font-family: cursive;
+}
+
+#popular h2 {
+    color: white;
+    font-size: 5rem;
+    text-decoration: underline;
+    text-align: center;
+    margin: 2rem 1rem;
+}
+
+#grid {
+    width: 74.94rem;
+    display: grid;
+    grid-template-columns: repeat(5, 13rem);
+    justify-content: space-evenly;
+    grid-template-rows: 18.33rem;
+}
+
+#grid img {
+    width: 13rem;
+    height: 16rem;
+    border-bottom-right-radius: 20%;
+    border-bottom-left-radius: 20%;
+}
+
+.items {
+    box-shadow: inset 0rem 0rem 1rem 1rem rgb(185, 69, 141);
+    cursor: pointer;
+}
+
+.items p {
+    color: transparent;
+    text-align: center;
+    background: url('https://cdn.openart.ai/stable_diffusion/f7a64225073a939c874645f87b40e923053d8489_2000x2000.webp') no-repeat local center center / cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    position: relative;
+    animation: zoom1 10s ease-in-out infinte;
+}
+
+#item-1:active::before {
+    content: "Movie Name : Oppenheimer & Aired : 21 July 2023 & Genres : Action,History,Thriller & Description : He is often known as the “father of the atomic bomb.” By the time the Manhattan Project was launched in the fall of 1942, Oppenheimer was already considered an exceptional theoretical physicist and had become deeply involved in exploring the possibility of an atomic bomb.";
+    font-size: 0.8rem;
+    background-color: black;
+    color: white;
+
+}
+
+#item-2:active::before {
+    content: "Movie Name : Inception & Aired : 16 July 2010 & Genres : Action,Horror,Science Fiction & Description : Inception centres on brooding “extractor” Dom Cobb (played by Leonardo DiCaprio)—a thief who invades targets' dreams through a chemical-induced shared dream state in order to steal valuable information. Having a reputation for being the best in his business, Cobb is commissioned by wealthy businessman ";
+    font-size: 0.8rem;
+    background-color: black;
+    color: white;
+
+}
+
+#item-3:active::before {
+    content: "Movie Name : Tenet & Aired : december 2020 & Genres : Action,Romance,War & Description : The film follows a former CIA agent who is recruited into a secret organization, tasked with tracing the origin of objects that are traveling backwards through time and their connection to an attack from the future to the present.";
+    font-size: 0.8rem;
+    background-color: black;
+    color: white;
+
+}
+
+#item-4:active::before {
+    content: "Movie Name : Joker & Aired : 2 October 2020 & Genres : Horror,Comedy,Thriller & Description : Set in 1981, it follows Arthur Fleck, a failed clown and aspiring stand-up comic whose descent into mental illness and nihilism inspires a violent countercultural revolution against the wealthy in a decaying Gotham City. Robert De Niro, Zazie Beetz and Frances Conroy appear in supporting roles.";
+    font-size: 0.8rem;
+    background-color: black;
+    color: white;
+
+}
+
+#item-5:active::before {
+    content: "Movie Name : The Creator & Aired : 29 September 2023 & Genres : Action,Comedy,Thriller & Description : Set in 2070, 15 years after a nuclear detonation in Los Angeles and a war against artificial intelligence, an ex-special forces agent is recruited to hunt down and kill the Creator who has developed a mysterious weapon with the power to end the war.";
+    font-size: 0.8rem;
+    background-color: black;
+    color: white;
+}
+/* Contact Section */
+#contact{
+    color: white;
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    border-radius: 20%;
+    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJGBIRH9Bw5fE8cklE4NCvLuGqq4u1nYN0KdlhR2DbnA&s') no-repeat center center/cover;
+
+}
+#contact h1{
+    display: block;
+    width: 100%;
+    font-size: 5rem;
+    text-decoration: underline;
+    text-align: center;
+    margin: 2rem 1rem;
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1.88rem;
+}
+#contact-box input, #contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+} 
+
+#contact-box form{
+    width: 40%;
+}
+
+#contact-box label{
+   font-size: 1.3rem;
+   font-family: 'Bree Serif', serif;
+
+}
+/* footer section */
+footer{
+    background: black;
+    color: white;
+    padding: 9px 20px;
+}
+footer div{
+    text-align: center;
+}
